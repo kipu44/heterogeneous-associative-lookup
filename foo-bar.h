@@ -15,6 +15,9 @@ struct Foo
     Foo(Foo && foo) noexcept : a(foo.a + 1) { std::cout << +i << "Foo() "  << a << " move-constructed from " << foo << "\n"; foo.s = "moved"; ++move.i; ++created.i; }
     Foo(const Foo & foo)     : a(foo.a + 1) { std::cout << +i << "Foo() "  << a << " copy-constructed from " << foo << "\n";                  ++copy.i; ++created.i; }
 
+    Foo & operator=(Foo && foo) noexcept { (void)foo; return *this; }
+    Foo & operator=(const Foo &  foo)    { (void)foo; return *this; }
+
     const int a = n();
     std::string s;
     Indent i;
