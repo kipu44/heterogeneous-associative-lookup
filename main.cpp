@@ -27,10 +27,10 @@ bool operator<(const Bar & bar1, const Bar & bar2)
 }
 
 template <typename M, typename T>
-void find(const M & map, const T & t)
+void find(M && map, T && t)
 {
-    const auto i = map.find(t);
-    cout << (i == map.end() ? 0 : i->second) << "\n";
+    const auto i = std::forward<M>(map).find(std::forward<T>(t));
+    cout << (i == std::forward<M>(map).end() ? 0 : i->second) << "\n";
 }
 
 int main()
