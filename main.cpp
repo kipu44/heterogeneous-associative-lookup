@@ -39,7 +39,7 @@ int main()
     const Foo f2;
     const Foo f3;
     {
-        const std::map<Bar, int, std::less<>> map =
+        const std::map<Bar, int, std::less<Bar>> map =
         {
             {Bar(f1), 1},
             {Bar(f2), 2},
