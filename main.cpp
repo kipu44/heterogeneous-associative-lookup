@@ -14,6 +14,8 @@ void find(const M & map, const T & t)
     cout << (i == map.end() ? 0 : i->second) << "\n";
 }
 
+// TODO: Make the lookup heterogeneous again.
+
 int main()
 {
     Raii r1(11);
