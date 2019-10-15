@@ -4,12 +4,16 @@
 
 using std::cout;
 
+// TODO: Which overloads are used?
+
 // void f(Foo foo)          { cout << ", " << foo << ", f: " << "      Foo   "; }
    void f(Foo & foo)        { cout << ", " << foo << ", f: " << "      Foo & "; }
    void f(Foo && foo)       { cout << ", " << foo << ", f: " << "      Foo &&"; }
 // void f(const Foo foo)    { cout << ", " << foo << ", f: " << "const Foo   "; }
    void f(const Foo & foo)  { cout << ", " << foo << ", f: " << "const Foo & "; }
    void f(const Foo && foo) { cout << ", " << foo << ", f: " << "const Foo &&"; }
+
+// TODO: Is the argument passed perfectly?
 
 #if 0
    template <typename T>
