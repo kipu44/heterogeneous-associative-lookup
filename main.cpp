@@ -7,7 +7,7 @@ void ignore(T /*t*/)
 }
 
 template <typename T>
-void g(T && foo)
+void g(T && foo) // TODO: What types are hidden behind autos inside this function?
 {
     auto b = foo;
     ignore(b);
@@ -20,7 +20,7 @@ void g(T && foo)
     auto * g = &foo;
     ignore(g);
     const auto * h = &foo;
-    ignore(h);
+    ignore(h); // You can put a breakpoint here.
 }
 
 auto foo()
