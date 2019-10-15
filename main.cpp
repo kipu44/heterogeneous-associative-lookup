@@ -6,10 +6,10 @@ using std::cout;
 
    void f(Foo foo)          { cout << ", " << foo << ", f: " << "      Foo   "; }
 // void f(Foo & foo)        { cout << ", " << foo << ", f: " << "      Foo & "; }
-// void f(Foo && foo)       { cout << ", " << foo << ", f: " << "      Foo &&"; }
+   void f(Foo && foo)       { cout << ", " << foo << ", f: " << "      Foo &&"; }
 // void f(const Foo foo)    { cout << ", " << foo << ", f: " << "const Foo   "; }
 // void f(const Foo & foo)  { cout << ", " << foo << ", f: " << "const Foo & "; }
-// void f(const Foo && foo) { cout << ", " << foo << ", f: " << "const Foo &&"; }
+   void f(const Foo && foo) { cout << ", " << foo << ", f: " << "const Foo &&"; }
 
 #if 0
    template <typename T>
