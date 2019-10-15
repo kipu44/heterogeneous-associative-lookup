@@ -4,12 +4,12 @@
 
 using std::cout;
 
-// void f(Foo foo)          { cout << ", " << foo << ", f: " << "      Foo   "; }
-   void f(Foo & foo)        { cout << ", " << foo << ", f: " << "      Foo & "; }
-   void f(Foo && foo)       { cout << ", " << foo << ", f: " << "      Foo &&"; }
+   void f(Foo foo)          { cout << ", " << foo << ", f: " << "      Foo   "; }
+// void f(Foo & foo)        { cout << ", " << foo << ", f: " << "      Foo & "; }
+// void f(Foo && foo)       { cout << ", " << foo << ", f: " << "      Foo &&"; }
 // void f(const Foo foo)    { cout << ", " << foo << ", f: " << "const Foo   "; }
-   void f(const Foo & foo)  { cout << ", " << foo << ", f: " << "const Foo & "; }
-   void f(const Foo && foo) { cout << ", " << foo << ", f: " << "const Foo &&"; }
+// void f(const Foo & foo)  { cout << ", " << foo << ", f: " << "const Foo & "; }
+// void f(const Foo && foo) { cout << ", " << foo << ", f: " << "const Foo &&"; }
 
 #if 0
    template <typename T>
@@ -18,12 +18,12 @@ using std::cout;
        cout << "/* g: " << "T &&"; f(std::forward<T>(foo)); cout << "\n";
    }
 #else
-// void g(Foo foo)          { cout << "/* g: " << "      Foo   "; f(foo); cout << " */\n"; }
-   void g(Foo & foo)        { cout << "/* g: " << "      Foo & "; f(foo); cout << " */\n"; }
-   void g(Foo && foo)       { cout << "/* g: " << "      Foo &&"; f(foo); cout << " */\n"; }
+   void g(Foo foo)          { cout << "/* g: " << "      Foo   "; f(foo); cout << " */\n"; }
+// void g(Foo & foo)        { cout << "/* g: " << "      Foo & "; f(foo); cout << " */\n"; }
+// void g(Foo && foo)       { cout << "/* g: " << "      Foo &&"; f(foo); cout << " */\n"; }
 // void g(const Foo foo)    { cout << "/* g: " << "const Foo   "; f(foo); cout << " */\n"; }
-   void g(const Foo & foo)  { cout << "/* g: " << "const Foo & "; f(foo); cout << " */\n"; }
-   void g(const Foo && foo) { cout << "/* g: " << "const Foo &&"; f(foo); cout << " */\n"; }
+// void g(const Foo & foo)  { cout << "/* g: " << "const Foo & "; f(foo); cout << " */\n"; }
+// void g(const Foo && foo) { cout << "/* g: " << "const Foo &&"; f(foo); cout << " */\n"; }
 #endif
 
 auto foo()
