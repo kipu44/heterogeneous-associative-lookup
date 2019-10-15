@@ -14,6 +14,8 @@ void find(const M & map, const T & t)
     cout << (i == map.end() ? 0 : i->second) << "\n";
 }
 
+// TODO: Fix compilation errors.
+
 int main()
 {
     Raii r1(11);
