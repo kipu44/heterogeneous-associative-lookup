@@ -4,6 +4,8 @@
 
 using std::cout;
 
+// TODO: Can you uncomment other overloads?
+
    void f(Foo foo)          { cout << ", " << foo << ", f: " << "      Foo   "; }
 // void f(Foo & foo)        { cout << ", " << foo << ", f: " << "      Foo & "; }
 // void f(Foo && foo)       { cout << ", " << foo << ", f: " << "      Foo &&"; }
