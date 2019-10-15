@@ -8,10 +8,10 @@
 using std::cout;
 
 template <typename M, typename T>
-void find(const M & map, const T & t)
+void find(M && map, T && t) // TODO: What benefit does the perfect forwarding give in this context?
 {
-    const auto i = map.find(t);
-    cout << (i == map.end() ? 0 : i->second) << "\n";
+    const auto i = std::forward<M>(map).find(std::forward<T>(t));
+    cout << (i == std::forward<M>(map).end() ? 0 : i->second) << "\n";
 }
 
 int main()
