@@ -46,8 +46,8 @@ int main()
     /* g:       Foo &&, 30, f:       Foo &  */ g(foo());
     /* g:       Foo &&, 40, f:       Foo &  */ g(Foo());
     /* g:       Foo &&, 10, f:       Foo &  */ g(std::move(f1));
-    /* g:       Foo &&, 50, f:       Foo &  */ g(std::move(foo()));
-    /* g:       Foo &&, 60, f:       Foo &  */ g(std::move(Foo()));
+    /* g:       Foo &&, 50, f:       Foo &  */ g(foo());
+    /* g:       Foo &&, 60, f:       Foo &  */ g(Foo());
     /* g: const Foo & , 70, f: const Foo &  */ g(cfoo());
     /* g: const Foo & , 20, f: const Foo &  */ g(f2);
     /* g: const Foo &&, 70, f: const Foo &  */ g(std::move(cfoo()));
