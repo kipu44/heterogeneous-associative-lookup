@@ -9,8 +9,8 @@ struct Indent
     Indent() : s((i += n) - n) { }
     ~Indent() { i = s; }
 
-    std::string operator-() const { return std::string(s + 0, ' '); }
-    std::string operator+() const { return std::string(s + 1, ' '); }
+    auto operator-() const { return std::string(s + 0, ' '); }
+    auto operator+() const { return std::string(s + 1, ' '); }
 
     const int s;
 
