@@ -42,6 +42,8 @@ int main()
     Foo f1; // 10
     const Foo f2; // 20
 
+    // TODO: Fix warnings/errors.
+
     /* g:       Foo & , 10, f:       Foo &  */ g(f1);
     /* g:       Foo &&, 30, f:       Foo &  */ g(foo());
     /* g:       Foo &&, 40, f:       Foo &  */ g(Foo());
