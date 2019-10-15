@@ -9,8 +9,8 @@ Then the next time you are asked for credentials they will be stored in plain te
 ### Xcode
 
 ```
-$ mkdir -p build;
-$ cd build;
+$ mkdir -p ../build;
+$ cd ../build;
 $ cmake -G Xcode ../source;
 ```
 
