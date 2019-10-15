@@ -18,3 +18,5 @@ $ cmake -G Xcode ../source;
 
 - https://en.cppreference.com/w/cpp/container/map/find
 - https://en.cppreference.com/w/cpp/utility/functional/less
+- https://plugins.jetbrains.com/plugin/11031-c-c--coverage
+- _Effective Modern C++. 42 Specific Ways to Improve Your Use of C++11 and C++14_
