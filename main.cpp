@@ -22,7 +22,7 @@ int main()
     const Foo f2;
     const Foo f3;
 
-    const std::map<Bar, int, std::less<Bar>> map =
+    const std::map<Bar, int, std::less<>> map =
     {
         {f1, 1},
         {f2, 2},
