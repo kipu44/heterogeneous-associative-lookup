@@ -15,7 +15,10 @@ struct Foo
     Foo(Foo && foo) noexcept : a(foo.a + 1) { std::cout << +i << "Foo() "  << a << " move-constructed from " << foo << "\n"; foo.s = "moved"; ++move.i; ++created.i; }
     Foo(const Foo & foo)     : a(foo.a + 1) { std::cout << +i << "Foo() "  << a << " copy-constructed from " << foo << "\n";                  ++copy.i; ++created.i; }
 
-    const int a = n();
+    Foo & operator=(const Foo & other) = default;
+    Foo & operator=(Foo && other) = default;
+
+    int a = n();
     std::string s;
     Indent i;
 
@@ -34,6 +37,9 @@ struct Bar
     ~Bar()                                         { std::cout << -i << "~Bar() " << f.a << "\n"; }
     Bar(Bar && bar) noexcept : f(std::move(bar.f)) { std::cout << +i << "Bar(Bar && bar) " << f.a << "\n";      ++move.i;           ++created.i; }
     Bar(const Bar & bar)     : f(bar.f)            { std::cout << +i << "Bar(const Bar & bar) " << f.a << "\n"; ++copy.i;           ++created.i; }
+
+    Bar & operator=(const Bar & other) = default;
+    Bar & operator=(Bar && other) = default;
 
     Foo f;
     Indent i;
